@@ -1,0 +1,21 @@
+#pragma once
+
+#include "Pipe_Corner_BL.h"
+#include "Pipe_Corner_BR.h"
+#include "Pipe_Corner_BR_NoFlange.h"
+#include "Pipe_Corner_TL.h"
+#include "Pipe_Corner_TR_NoFlange.h"
+#include "Pipe_Cross_Overlap_NoFlange.h"
+#include "Pipe_Cross_Overlap.h"
+#include "Pipe_Cross_Underlap_NoFlange.h"
+#include "Pipe_Cross.h"
+#include "Pipe_Nothing.h"
+#include "Pipe_Straight_LR_NoFlange.h"
+#include "Pipe_Straight_LR.h"
+#include "Pipe_Straight_TB_NoFlange.h"
+#include "Pipe_Straight_TB.h"
+#include "Pipe_Tee_LR_B.h"
+#include "Pipe_Tee_LR_T.h"
+#include "Pipe_Tee_TB_L.h"
+#include "Pipe_Tee_TB_R.h"
+

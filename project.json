@@ -1,0 +1,999 @@
+{
+	"lastBuffer": "main.cpp",
+	"PNGFlags": {
+		"ALL": [
+			"palette=${appPath}/PokittoLib/Pokitto/POKITTO_CORE/PALETTES/palCGA.cpp"
+		]
+	},
+	"libs": {
+		"Pokitto": [
+			{
+				"recurse": "${appPath}/PokittoLib/Pokitto",
+				"ignore": "POKITTO_SIM|POKITTO_XTERNALS|Documentation|examples?|Physics|(?:.*_SIM.*)|main.cpp"
+			}
+		]
+	},
+	"SFlags": {
+		"Pokitto": [
+			"-I${projectPath}",
+			"-mcpu=cortex-m0plus",
+			"-mthumb"
+		]
+	},
+	"CPPFlags": {
+		"DEBUG": [
+			"-Og",
+			"-g3",
+			"-ggdb"
+		],
+		"RELEASE": [
+			"-O3"
+		],
+		"Pokitto": [
+			"-DPROJ_FPS=60",
+			"-I${projectPath}",
+			"-DPOKITTO",
+			"-fno-rtti",
+			"-Wno-pointer-arith",
+			"-c",
+			"-fno-exceptions",
+			"-fno-builtin",
+			"-ffunction-sections",
+			"-fdata-sections",
+			"-funsigned-char",
+			"-MMD",
+			"-fno-delete-null-pointer-checks",
+			"-fomit-frame-pointer",
+			"-mcpu=cortex-m0plus",
+			"-mthumb",
+			"-Wno-psabi",
+			"-Wno-conversion-null",
+			"-Wno-narrowing",
+			"-Wno-write-strings",
+			"-DTARGET_LPC11U68",
+			"-D__MBED__=1",
+			"-DDEVICE_I2CSLAVE=1",
+			"-DTARGET_LIKE_MBED",
+			"-DTARGET_NXP",
+			"-D__MBED_CMSIS_RTOS_CM",
+			"-DDEVICE_RTC=1",
+			"-DTOOLCHAIN_object",
+			"-D__CMSIS_RTOS",
+			"-DTOOLCHAIN_GCC",
+			"-DTARGET_CORTEX_M",
+			"-DTARGET_M0P",
+			"-DTARGET_UVISOR_UNSUPPORTED",
+			"-DDEVICE_SERIAL=1",
+			"-DDEVICE_INTERRUPTIN=1",
+			"-DTARGET_LPCTarget",
+			"-DTARGET_CORTEX",
+			"-DDEVICE_I2C=1",
+			"-D__CORTEX_M0PLUS",
+			"-DTARGET_FF_ARDUINO",
+			"-DTARGET_RELEASE",
+			"-DMBED_BUILD_TIMESTAMP=1526394586.66",
+			"-DARM_MATH_CM0PLUS",
+			"-DTARGET_LPC11U6X",
+			"-DDEVICE_SLEEP=1",
+			"-DTOOLCHAIN_GCC_ARM",
+			"-DDEVICE_SPI=1",
+			"-DDEVICE_ANALOGIN=1",
+			"-DDEVICE_PWMOUT=1",
+			"-DTARGET_LIKE_CORTEX_M0"
+		],
+		"Desktop": [
+			"-I${projectPath}",
+			"-DDESKTOP",
+			"-fno-rtti",
+			"-Wno-pointer-arith",
+			"-c",
+			"-fno-exceptions",
+			"-fno-builtin",
+			"-ffunction-sections",
+			"-fdata-sections",
+			"-funsigned-char",
+			"-MMD",
+			"-fno-delete-null-pointer-checks"
+		],
+		"ALL": [
+			"-std=c++14"
+		]
+	},
+	"CFlags": {
+		"DEBUG": [
+			"-Og",
+			"-g3",
+			"-ggdb"
+		],
+		"RELEASE": [
+			"-O3"
+		],
+		"Pokitto": [
+			"-I${projectPath}",
+			"-DPOKITTO",
+			"-Wno-pointer-arith",
+			"-c",
+			"-fno-exceptions",
+			"-fno-builtin",
+			"-ffunction-sections",
+			"-fdata-sections",
+			"-funsigned-char",
+			"-MMD",
+			"-fno-delete-null-pointer-checks",
+			"-fomit-frame-pointer",
+			"-mcpu=cortex-m0plus",
+			"-mthumb",
+			"-Wno-psabi",
+			"-Wwrite-strings",
+			"-DTARGET_LPC11U68",
+			"-D__MBED__=1",
+			"-DDEVICE_I2CSLAVE=1",
+			"-DTARGET_LIKE_MBED",
+			"-DTARGET_NXP",
+			"-D__MBED_CMSIS_RTOS_CM",
+			"-DDEVICE_RTC=1",
+			"-DTOOLCHAIN_object",
+			"-D__CMSIS_RTOS",
+			"-DTOOLCHAIN_GCC",
+			"-DTARGET_CORTEX_M",
+			"-DTARGET_M0P",
+			"-DTARGET_UVISOR_UNSUPPORTED",
+			"-DDEVICE_SERIAL=1",
+			"-DDEVICE_INTERRUPTIN=1",
+			"-DTARGET_LPCTarget",
+			"-DTARGET_CORTEX",
+			"-DDEVICE_I2C=1",
+			"-D__CORTEX_M0PLUS",
+			"-DTARGET_FF_ARDUINO",
+			"-DTARGET_RELEASE",
+			"-DMBED_BUILD_TIMESTAMP=1526394586.66",
+			"-DARM_MATH_CM0PLUS",
+			"-DTARGET_LPC11U6X",
+			"-DDEVICE_SLEEP=1",
+			"-DTOOLCHAIN_GCC_ARM",
+			"-DDEVICE_SPI=1",
+			"-DDEVICE_ANALOGIN=1",
+			"-DDEVICE_PWMOUT=1",
+			"-DTARGET_LIKE_CORTEX_M0"
+		],
+		"Desktop": [
+			"-I${projectPath}",
+			"-DDESKTOP",
+			"-fno-rtti",
+			"-Wno-pointer-arith",
+			"-c",
+			"-fno-exceptions",
+			"-fno-builtin",
+			"-ffunction-sections",
+			"-fdata-sections",
+			"-funsigned-char",
+			"-MMD",
+			"-fno-delete-null-pointer-checks"
+		],
+		"ALL": []
+	},
+	"GDBFlags": {
+		"Pokitto": [
+			"${projectPath}/${projectName}.elf"
+		]
+	},
+	"emuFlags": {
+		"Pokitto": [
+			"${projectPath}/${projectName}.bin"
+		]
+	},
+	"ELF2BINFlags": {
+		"Pokitto": [
+			"-O",
+			"binary",
+			"${projectPath}/${projectName}.elf",
+			"${projectPath}/${projectName}.bin"
+		]
+	},
+	"LDFlags": {
+		"RELEASE": [
+			"-O3"
+		],
+		"DEBUG": [
+			"-Og",
+			"-g3",
+			"-ggdb"
+		],
+		"Pokitto": [
+			"-Wl,--gc-sections",
+			"-Wl,-n",
+			"--specs=nano.specs",
+			"-mcpu=cortex-m0plus",
+			"-mthumb",
+			"-Wl,--undefined=g_pfnVectors",
+			"-Wl,--undefined=boot",
+			"-T",
+			"${appPath}/PokittoLib/Pokitto/mbed-pokitto/targets/cmsis/TARGET_NXP/TARGET_LPC11U6X/TOOLCHAIN_GCC_ARM/TARGET_LPC11U68/LPC11U68.ld",
+			"--output",
+			"${projectPath}/${projectName}.elf",
+			"$objectFiles",
+			"-Wl,--start-group",
+			"-lstdc++",
+			"-lsupc++",
+			"-lm",
+			"-lc",
+			"-lgcc",
+			"-lnosys",
+			"-Wl,--end-group"
+		]
+	},
+	"target": "Pokitto",
+	"pipelines": {
+		"Pokitto": [
+			"img-to-c",
+			"compile-cpp",
+			"compile-ld",
+			"compile-bin",
+			"make-img"
+		],
+		"Desktop": [
+			"compile-cpp",
+			"compile-ld",
+			"compile-bin"
+		]
+	},
+	"meta": {
+		"": {},
+		"/Bacon.png": {
+			"sdcard": false
+		},
+		"/Hello CPP.bin": {
+			"sdcard": false
+		},
+		"/File.cpp": {
+			"sdcard": false
+		},
+		"/Hello CPP.elf": {
+			"sdcard": false
+		},
+		"/My_settings.h": {
+			"sdcard": false
+		},
+		"/Smile.h": {
+			"sdcard": false
+		},
+		"/Smile.png": {
+			"sdcard": false
+		},
+		"/Test.h": {
+			"sdcard": false
+		},
+		"/Test.png": {
+			"sdcard": true
+		},
+		"/main.cpp": {
+			"sdcard": false
+		},
+		"/project.json": {
+			"sdcard": false
+		},
+		"/untitled folder": {
+			"sdcard": false
+		},
+		"/src": {
+			"sdcard": false
+		},
+		"/src/Game.h": {
+			"sdcard": false
+		},
+		"/src/Game.cpp": {
+			"sdcard": false
+		},
+		"/src/utils": {
+			"sdcard": false
+		},
+		"/src/utils/Structs.h": {
+			"sdcard": false
+		},
+		"/src/puzzles": {
+			"sdcard": false
+		},
+		"/src/puzzles/Puzzle.h": {
+			"sdcard": false
+		},
+		"/src/puzzles/Game_DrawSplash.h": {
+			"sdcard": false
+		},
+		"/src/puzzles/Game_Render.h": {
+			"sdcard": false
+		},
+		"/src/Game_DrawSplash.h": {
+			"sdcard": false
+		},
+		"/src/Game_Render.h": {
+			"sdcard": false
+		},
+		"/src/images": {
+			"sdcard": false
+		},
+		"/src/images/Smile.png": {
+			"sdcard": false
+		},
+		"/src/images/Node0.png": {
+			"sdcard": false
+		},
+		"/src/images/Node0 copy.png": {
+			"sdcard": false
+		},
+		"/src/images/Node0 copy 2.png": {
+			"sdcard": false
+		},
+		"/src/images/Node0 copy 3.png": {
+			"sdcard": false
+		},
+		"/src/images/Node0 copy 4.png": {
+			"sdcard": false
+		},
+		"/src/images/Node0 copy 5.png": {
+			"sdcard": false
+		},
+		"/src/images/Node0 copy 6.png": {
+			"sdcard": false
+		},
+		"/src/images/Node0 copy 7.png": {
+			"sdcard": false
+		},
+		"/src/images/Node0 copy 8.png": {
+			"sdcard": false
+		},
+		"/src/images/Node1.png": {
+			"sdcard": false
+		},
+		"/src/images/Node2.png": {
+			"sdcard": false
+		},
+		"/src/images/Node3.png": {
+			"sdcard": false
+		},
+		"/src/images/Node4.png": {
+			"sdcard": false
+		},
+		"/src/images/Node5.png": {
+			"sdcard": false
+		},
+		"/src/images/Node6.png": {
+			"sdcard": false
+		},
+		"/src/images/Node7.png": {
+			"sdcard": false
+		},
+		"/src/images/Node8.png": {
+			"sdcard": false
+		},
+		"/src/images/Node8 copy.png": {
+			"sdcard": false
+		},
+		"/src/images/Node8 copy 2.png": {
+			"sdcard": false
+		},
+		"/src/images/Node8 copy 3.png": {
+			"sdcard": false
+		},
+		"/src/images/Node9.png": {
+			"sdcard": false
+		},
+		"/src/images/Node10.png": {
+			"sdcard": false
+		},
+		"/src/images/Nodes.h": {
+			"sdcard": false
+		},
+		"/src/images/Node1.h": {
+			"sdcard": false
+		},
+		"/src/images/Node4.h": {
+			"sdcard": false
+		},
+		"/src/images/Node3.h": {
+			"sdcard": false
+		},
+		"/src/images/Node10.h": {
+			"sdcard": false
+		},
+		"/src/images/Node5.h": {
+			"sdcard": false
+		},
+		"/src/images/Node6.h": {
+			"sdcard": false
+		},
+		"/src/images/Node7.h": {
+			"sdcard": false
+		},
+		"/src/images/Node8.h": {
+			"sdcard": false
+		},
+		"/src/images/Node9.h": {
+			"sdcard": false
+		},
+		"/src/images/Node2.h": {
+			"sdcard": false
+		},
+		"/src/images/Pipe1.png": {
+			"sdcard": false
+		},
+		"/src/images/Pipe2.png": {
+			"sdcard": false
+		},
+		"/src/images/Pipe3.png": {
+			"sdcard": false
+		},
+		"/src/images/Pipe4.png": {
+			"sdcard": false
+		},
+		"/src/images/Pipe5.png": {
+			"sdcard": false
+		},
+		"/src/images/Pipe7.png": {
+			"sdcard": false
+		},
+		"/src/images/Pipe8.png": {
+			"sdcard": false
+		},
+		"/src/images/Pipe9.png": {
+			"sdcard": false
+		},
+		"/src/images/Pipe10.png": {
+			"sdcard": false
+		},
+		"/src/images/Pipe11.png": {
+			"sdcard": false
+		},
+		"/src/images/Pipe12.png": {
+			"sdcard": false
+		},
+		"/src/images/Pipe13.png": {
+			"sdcard": false
+		},
+		"/src/images/Pipe14.png": {
+			"sdcard": false
+		},
+		"/src/images/Pipe16.png": {
+			"sdcard": false
+		},
+		"/src/images/Pipe15.png": {
+			"sdcard": false
+		},
+		"/src/images/Pipe6.png": {
+			"sdcard": false
+		},
+		"/src/images/untitled folder": {
+			"sdcard": false
+		},
+		"/src/images/nodes": {
+			"sdcard": false
+		},
+		"/src/images/pipes": {
+			"sdcard": false
+		},
+		"/src/images/nodes/Node1.h": {
+			"sdcard": false
+		},
+		"/src/images/nodes/Node2.h": {
+			"sdcard": false
+		},
+		"/src/images/nodes/Node1.png": {
+			"sdcard": false
+		},
+		"/src/images/nodes/Node2.png": {
+			"sdcard": false
+		},
+		"/src/images/nodes/Node3.h": {
+			"sdcard": false
+		},
+		"/src/images/nodes/Node3.png": {
+			"sdcard": false
+		},
+		"/src/images/nodes/Node4.h": {
+			"sdcard": false
+		},
+		"/src/images/nodes/Node4.png": {
+			"sdcard": false
+		},
+		"/src/images/nodes/Node5.h": {
+			"sdcard": false
+		},
+		"/src/images/nodes/Node5.png": {
+			"sdcard": false
+		},
+		"/src/images/nodes/Node6.h": {
+			"sdcard": false
+		},
+		"/src/images/nodes/Node6.png": {
+			"sdcard": false
+		},
+		"/src/images/nodes/Node7.h": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe1.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe2.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe3.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe4.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe5.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe6.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe7.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe16.png": {
+			"sdcard": false
+		},
+		"/src/images/nodes/Nodes.h": {
+			"sdcard": false
+		},
+		"/src/images/Pipe_Nothing.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Nothing.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Corner_BR.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Corner_TL.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Horizontal.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Vertical.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Corner_TR.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Corner_BL.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipes.h": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe7.h": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe6.h": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe16.h": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Corner_BR.h": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Vertical.h": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Corner_TR.h": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Corner_TL.h": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Corner_BL.h": {
+			"sdcard": false
+		},
+		"/src/puzzles/Puzzles.h": {
+			"sdcard": false
+		},
+		"/src/images/nodes/Node10.png": {
+			"sdcard": false
+		},
+		"/src/images/nodes/Node10.h": {
+			"sdcard": false
+		},
+		"/src/images/nodes/Node8.h": {
+			"sdcard": false
+		},
+		"/src/images/nodes/Node7.png": {
+			"sdcard": false
+		},
+		"/src/images/nodes/Node8.png": {
+			"sdcard": false
+		},
+		"/src/images/nodes/Node9.h": {
+			"sdcard": false
+		},
+		"/src/images/nodes/Node9.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe10.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe11.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe12.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe13.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe14.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe15.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe8.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe9.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Nothing.h": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe10.h": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe11.h": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe12.h": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe13.h": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe15.h": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe14.h": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe8.h": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe9.h": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Horizontal.h": {
+			"sdcard": false
+		},
+		"/src/Game_GameOver.h": {
+			"sdcard": false
+		},
+		"/src/Game_GameOver.cpp": {
+			"sdcard": false
+		},
+		"/src/Game_DrawSplash.cpp": {
+			"sdcard": false
+		},
+		"/src/Game_Render.cpp": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Corner_TR_NoFlange.png": {
+			"sdcard": false
+		},
+		"/src/images/Pipe_Corner_BR.png": {
+			"sdcard": false
+		},
+		"/src/images/Pipe_Corner_BR_NoFlange.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Corner_BR_NoFlange.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_TB_NoFlange.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_TB.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Cross_Underlap_NoFlange.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Cross.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Cross_Overlap_NoFlange.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Cross_Overlap.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Straight_LR_NoFlange.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Straight_LR.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Straight_TB.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe__Straight_TB_NoFlange.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Straight_TB_NoFlange.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Tee_BR.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Tee_BL.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Tee_LR_B.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Tee_TB_R.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Tee_TB_L.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Tee_LR_T.png": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Corner_TR_NoFlange.h": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Corner_BR_NoFlange.h": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Cross_Underlap_NoFlange.h": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Cross.h": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Cross_Overlap_NoFlange.h": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Straight_LR_NoFlange.h": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Straight_LR.h": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Straight_TB.h": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Cross_Overlap.h": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Straight_TB_NoFlange.h": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Tee_LR_B.h": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Tee_TB_R.h": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Tee_TB_L.h": {
+			"sdcard": false
+		},
+		"/src/images/pipes/Pipe_Tee_LR_T.h": {
+			"sdcard": false
+		},
+		"/src/Game_Utils.cpp": {
+			"sdcard": false
+		},
+		"/src/utils/GameCookie.h": {
+			"sdcard": false
+		},
+		"/Pipes_Article3_Pokitto.elf": {
+			"sdcard": false
+		},
+		"/Pipes_Article3_Pokitto.bin": {
+			"sdcard": false
+		},
+		"/src/images/conenctors": {
+			"sdcard": false
+		},
+		"/src/images/connectors": {
+			"sdcard": false
+		},
+		"/src/images/connectors/Pipe_Corner_BR.png": {
+			"sdcard": false
+		},
+		"/src/images/connectors/Connector.png": {
+			"sdcard": false
+		},
+		"/src/images/connectors/Connector_Horizontal.png": {
+			"sdcard": false
+		},
+		"/src/images/connectors/Connector_Vertical.png": {
+			"sdcard": false
+		},
+		"/src/images/connectors/Connector_Corner_TL.png": {
+			"sdcard": false
+		},
+		"/src/images/connectors/Connector_Corner_TR.png": {
+			"sdcard": false
+		},
+		"/src/images/connectors/Connector_Corner_BL.png": {
+			"sdcard": false
+		},
+		"/src/images/connectors/Connector_Corner_BR.png": {
+			"sdcard": false
+		},
+		"/src/images/connectors/Connectors.h": {
+			"sdcard": false
+		},
+		"/src/images/connectors/Connector_Horizontal.h": {
+			"sdcard": false
+		},
+		"/src/images/connectors/Connector_Corner_TL.h": {
+			"sdcard": false
+		},
+		"/src/images/connectors/Connector_Corner_TR.h": {
+			"sdcard": false
+		},
+		"/src/images/connectors/Connector_Vertical.h": {
+			"sdcard": false
+		},
+		"/src/images/connectors/Connector_Corner_BL.h": {
+			"sdcard": false
+		},
+		"/src/images/connectors/Connector_Corner_BR.h": {
+			"sdcard": false
+		},
+		"/src/images/connectors/Connector_Corner_BL copy.png": {
+			"sdcard": false
+		},
+		"/src/images/connectors/Connector_Nothing.png": {
+			"sdcard": false
+		},
+		"/src/images/connectors/Connector_Nothing.h": {
+			"sdcard": false
+		},
+		"/src/images/arrows": {
+			"sdcard": false
+		},
+		"/src/images/arrows/ArrowUp.png": {
+			"sdcard": false
+		},
+		"/src/images/arrows/ArrowDown.png": {
+			"sdcard": false
+		},
+		"/src/images/arrows/Arrows.h": {
+			"sdcard": false
+		},
+		"/src/images/arrows/ArrowDown.h": {
+			"sdcard": false
+		},
+		"/src/images/arrows/ArrowUp.h": {
+			"sdcard": false
+		},
+		"/Pipes_Article3_Pokitto.bin.1.png": {
+			"sdcard": false
+		},
+		"/Pipes_Article3_Pokitto.bin.1.h": {
+			"sdcard": false
+		},
+		"/Pipes_Article3_Pokitto.bin.1.gif": {
+			"sdcard": false
+		},
+		"/Pipes_Article3_Pokitto.bin.2.png": {
+			"sdcard": false
+		},
+		"/Pipes_Article3_Pokitto.bin.2.h": {
+			"sdcard": false
+		},
+		"/src/Game_SplashScreen.cpp": {
+			"sdcard": false
+		},
+		"/src/Game_LevelSelect.cpp": {
+			"sdcard": false
+		},
+		"/Pipes_Article3_Pokitto.bin.3.png": {
+			"sdcard": false
+		},
+		"/Pipes_Article3_Pokitto.bin.4.gif": {
+			"sdcard": false
+		},
+		"/Pipes_Article3_Pokitto.bin.3.h": {
+			"sdcard": false
+		},
+		"/src/Game_Menus.cpp": {
+			"sdcard": false
+		},
+		"/src/images/Heading.png": {
+			"sdcard": false
+		},
+		"/src/images/Heading.h": {
+			"sdcard": false
+		},
+		"/Pipes_Article2_Pokitto.elf": {
+			"sdcard": false
+		},
+		"/Pipes_Article2_Pokitto.bin": {
+			"sdcard": false
+		},
+		"/ocuments": {
+			"sdcard": false
+		},
+		"/documents": {
+			"sdcard": false
+		},
+		"/documents/Pipes_Article2_Body.docx": {
+			"sdcard": false
+		},
+		"/documents/Pipes_Article2_Callouts.docx": {
+			"sdcard": false
+		},
+		"/documents/~$pes_Article2_Body.docx": {
+			"sdcard": false
+		},
+		"/documents/Screen Shot 2020-03-08 at 5.37.09 pm.png": {
+			"sdcard": false
+		},
+		"/documents/Img1.png": {
+			"sdcard": false
+		},
+		"/documents/Img2.png": {
+			"sdcard": false
+		},
+		"/documents/Img3.png": {
+			"sdcard": false
+		},
+		"/documents/Img4.png": {
+			"sdcard": false
+		},
+		"/documents/Img2 copy.png": {
+			"sdcard": false
+		},
+		"/documents/Img1.h": {
+			"sdcard": false
+		},
+		"/documents/Img4.h": {
+			"sdcard": false
+		},
+		"/documents/Img3.h": {
+			"sdcard": false
+		},
+		"/documents/Img5.png": {
+			"sdcard": false
+		},
+		"/documents/img6.png": {
+			"sdcard": false
+		},
+		"/documents/Img6.png": {
+			"sdcard": false
+		},
+		"/documents/Img7.png": {
+			"sdcard": false
+		},
+		"/documents/Img8.png": {
+			"sdcard": false
+		},
+		"/documents/Img9.png": {
+			"sdcard": false
+		},
+		"/documents/~$pes_Article2_Callouts.docx": {
+			"sdcard": false
+		},
+		"/documents/Img2.h": {
+			"sdcard": false
+		},
+		"/documents/Img8.h": {
+			"sdcard": false
+		},
+		"/documents/img6.h": {
+			"sdcard": false
+		},
+		"/documents/Img7.h": {
+			"sdcard": false
+		},
+		"/documents/Img9.h": {
+			"sdcard": false
+		}
+	}
+}
