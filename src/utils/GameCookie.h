@@ -7,12 +7,12 @@ class GameCookie : public Pokitto::Cookie {
     
     public:
     
-    	byte initialised;
-        byte level5x5 = 0;
-        byte level6x6 = 0;
-        byte level7x7 = 0;
-        byte level8x8 = 0;
-        byte level9x9 = 0;
+    	uint8_t initialised;
+        uint8_t level5x5 = 0;
+        uint8_t level6x6 = 0;
+        uint8_t level7x7 = 0;
+        uint8_t level8x8 = 0;
+        uint8_t level9x9 = 0;
 
 
 	public:
@@ -30,7 +30,7 @@ class GameCookie : public Pokitto::Cookie {
 
 		}
 
-		void updateLevel(byte level, byte index) {
+		void updateLevel(uint8_t level, uint8_t index) {
 
 			switch (level) {
 
@@ -60,7 +60,7 @@ class GameCookie : public Pokitto::Cookie {
 
 		}
 
-		byte getLevelIndex(byte level) {
+		uint8_t getLevelIndex(uint8_t level) {
 
 			switch (level) {
 

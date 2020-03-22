@@ -8,7 +8,7 @@ using PD = Pokitto::Display;
 /* ----------------------------------------------------------------------------
  *  Return the upper 4 bits of a byte.
  */
-byte Game::leftValue(byte val) {
+uint8_t Game::leftValue(uint8_t val) {
 
   return val >> 4; 
       
@@ -18,7 +18,7 @@ byte Game::leftValue(byte val) {
 /* ----------------------------------------------------------------------------
  *  Return the lower 4 bits of a byte.
  */
-byte Game::rightValue(byte val) {
+uint8_t Game::rightValue(uint8_t val) {
 
   return val & 0x0F; 
       
@@ -28,11 +28,11 @@ byte Game::rightValue(byte val) {
 /* ----------------------------------------------------------------------------
  *  Initialise the board.
  */
-void Game::initBoard(byte puzzleNumber) {
+void Game::initBoard(uint8_t puzzleNumber) {
 
-  byte x = 0;
-  byte y = 0;
-  byte byteRead = 0;
+  uint8_t x = 0;
+  uint8_t y = 0;
+  uint8_t byteRead = 0;
 
   for (int i = (puzzleNumber * 15); i < (puzzleNumber + 1) * 15; i++) {
 
@@ -71,11 +71,11 @@ void Game::initBoard(byte puzzleNumber) {
 /* ----------------------------------------------------------------------------
  *  Has the node already been played?
  */
-bool Game::nodeAlreadyPlayed(byte value) { 
+bool Game::nodeAlreadyPlayed(uint8_t value) { 
 
-  for (byte y = 0; y < puzzle.maximum.y; y++) {
+  for (uint8_t y = 0; y < puzzle.maximum.y; y++) {
     
-    for (byte x = 0; x < puzzle.maximum.x; x++) {
+    for (uint8_t x = 0; x < puzzle.maximum.x; x++) {
       
       if (getNodeValue(x, y) == value && !isNode(x, y)) {
         
@@ -95,11 +95,11 @@ bool Game::nodeAlreadyPlayed(byte value) {
 /* ----------------------------------------------------------------------------
  *  Clear the board of pipes for a certain node value.
  */
-void Game::clearBoard(byte nodeValue) {
+void Game::clearBoard(uint8_t nodeValue) {
 
-  for (byte y = 0; y < puzzle.maximum.y; y++) {
+  for (uint8_t y = 0; y < puzzle.maximum.y; y++) {
     
-    for (byte x = 0; x < puzzle.maximum.x; x++) {
+    for (uint8_t x = 0; x < puzzle.maximum.x; x++) {
       
       if (getNodeValue(x, y) == nodeValue && !isNode(x, y)) {
         
@@ -117,7 +117,7 @@ void Game::clearBoard(byte nodeValue) {
 /* ----------------------------------------------------------------------------
  *  Is the position nominated a node?
  */
-bool Game::isNode(byte x, byte y) {
+bool Game::isNode(uint8_t x, uint8_t y) {
 
   return (puzzle.board[y][x] & 0xF0) == 0xF0;
   
@@ -127,7 +127,7 @@ bool Game::isNode(byte x, byte y) {
 /* ----------------------------------------------------------------------------
  *  Get the node value for the position.
  */
-byte Game::getNodeValue(byte x, byte y) {
+uint8_t Game::getNodeValue(uint8_t x, uint8_t y) {
   
   return (puzzle.board[y][x] & 0x0F);
 
@@ -137,7 +137,7 @@ byte Game::getNodeValue(byte x, byte y) {
 /* ----------------------------------------------------------------------------
  *  Is the position nominated a pipe?
  */
-bool Game::isPipe(byte x, byte y) {
+bool Game::isPipe(uint8_t x, uint8_t y) {
 
   return (puzzle.board[y][x] & 0xF0) > 0x00 && (puzzle.board[y][x] & 0xF0) != 0xF0;
   
@@ -147,7 +147,7 @@ bool Game::isPipe(byte x, byte y) {
 /* ----------------------------------------------------------------------------
  *  Get the pipe value for the position.
  */
-byte Game::getPipeValue(byte x, byte y) {
+uint8_t Game::getPipeValue(uint8_t x, uint8_t y) {
   
   return (puzzle.board[y][x] & 0xF0) >> 4;
 
@@ -157,7 +157,7 @@ byte Game::getPipeValue(byte x, byte y) {
 /* ----------------------------------------------------------------------------
  *  Set the pipe value for the position.
  */
-void Game::setCellValue(byte x, byte y, byte pipeValue, byte nodeValue) {
+void Game::setCellValue(uint8_t x, uint8_t y, uint8_t pipeValue, uint8_t nodeValue) {
   
   puzzle.board[y][x] = (pipeValue << 4) | nodeValue;
   
@@ -181,9 +181,9 @@ void Game::clearSelection() {
  */
 bool Game::isPuzzleComplete() {
 
-  for (byte y = 0; y < puzzle.maximum.y; y++) {
+  for (uint8_t y = 0; y < puzzle.maximum.y; y++) {
     
-    for (byte x = 0; x < puzzle.maximum.x; x++) {
+    for (uint8_t x = 0; x < puzzle.maximum.x; x++) {
       
       if (getNodeValue(x, y) == 0) {
         

@@ -438,7 +438,7 @@ void Game::play_NodeSelected() {
 /* ----------------------------------------------------------------------------
  *   Fix the pipe graphics when reversing back on yourself.
  */
-void Game::updatePipeWhenReversing(byte x, byte y) {
+void Game::updatePipeWhenReversing(uint8_t x, uint8_t y) {
 
   switch (getPipeValue(x, y)) {
 
@@ -482,7 +482,7 @@ void Game::updatePipeWhenReversing(byte x, byte y) {
  *   selectedNode:  The node previously selected.
  *   x and y:       Coordinates to test.  Passed as char to allow negatives.
  */
-bool Game::validMove(byte direction, Node selectedNode, int x, int y) {
+bool Game::validMove(uint8_t direction, Node selectedNode, int x, int y) {
 
   
   // Off the grid!
