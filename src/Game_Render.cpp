@@ -79,9 +79,9 @@ void Game::renderBoard() {
 
   // Draw placed pipes ..
   
-  for (int y = 0; y < puzzle.maximum.y; y++) {
+  for (uint8_t y = 0; y < puzzle.maximum.y; y++) {
       
-    for (int x = 0; x < puzzle.maximum.x; x++) {
+    for (uint8_t x = 0; x < puzzle.maximum.x; x++) {
       
       if (isPipe(x,y)) {
         
@@ -97,9 +97,9 @@ void Game::renderBoard() {
 
    // Draw nodes ..
   
-  for (int y = 0; y < puzzle.maximum.y; y++) {
+  for (uint8_t y = 0; y < puzzle.maximum.y; y++) {
       
-    for (int x = 0; x < puzzle.maximum.x; x++) {
+    for (uint8_t x = 0; x < puzzle.maximum.x; x++) {
       
       if (isNode(x, y)) {
         
@@ -116,9 +116,9 @@ void Game::renderBoard() {
 
   PD::setColor(9);
   
-  for (int y = 0; y <= puzzle.maximum.y; y++) {
+  for (uint8_t y = 0; y <= puzzle.maximum.y; y++) {
   
-    for (int x = 0; x <= puzzle.maximum.x; x++) {
+    for (uint8_t x = 0; x <= puzzle.maximum.x; x++) {
       
       PD::drawPixel(x * GRID_WIDTH, y * GRID_HEIGHT);
       

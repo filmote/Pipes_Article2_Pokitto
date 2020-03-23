@@ -34,7 +34,7 @@ void Game::initBoard(uint8_t puzzleNumber) {
   uint8_t y = 0;
   uint8_t byteRead = 0;
 
-  for (int i = (puzzleNumber * 15); i < (puzzleNumber + 1) * 15; i++) {
+  for (uint8_t i = (puzzleNumber * 15); i < (puzzleNumber + 1) * 15; i++) {
 
     byteRead = puzzles_5x5[i];
 

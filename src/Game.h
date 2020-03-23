@@ -53,7 +53,7 @@ class Game {
       void clearSelection();
       bool isPuzzleComplete();
       void updatePipeWhenReversing(uint8_t x, uint8_t y);
-      bool validMove(uint8_t direction, Node selectedNode, int x, int y);
+      bool validMove(uint8_t direction, Node selectedNode, int8_t x, int8_t y);
 
 
     private:

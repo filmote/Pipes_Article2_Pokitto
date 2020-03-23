@@ -480,9 +480,9 @@ void Game::updatePipeWhenReversing(uint8_t x, uint8_t y) {
  *   
  *   direction:     The button the user clicked, eg. UP, DOWN, LEFT and Right.
  *   selectedNode:  The node previously selected.
- *   x and y:       Coordinates to test.  Passed as char to allow negatives.
+ *   x and y:       Coordinates to test.  Passed as int8_t to allow negatives.
  */
-bool Game::validMove(uint8_t direction, Node selectedNode, int x, int y) {
+bool Game::validMove(uint8_t direction, Node selectedNode, int8_t x, int8_t y) {
 
   
   // Off the grid!

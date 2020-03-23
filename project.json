@@ -995,5 +995,8 @@
 		"/documents/Img9.h": {
 			"sdcard": false
 		}
+	},
+	"BUILDFlags": {
+		"Pokitto": {}
 	}
 }
